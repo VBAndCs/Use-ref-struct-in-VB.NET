@@ -2,6 +2,7 @@ How to use C# ref struct in VB.NET
 
 # Alert:
 The workaround I am using here seems upsetting one of Roslyn team, so, he filed [this issue]( https://github.com/dotnet/roslyn/issues/50118) to ask to prevent this worarount and deny VB any access to ref structs, which makes VB unable to use important classes and libraries in .NET Core such as System.Text.Json. So, I think it's time for VB community to make the team hear their voice. Please, fight against killing your favorite language.
+After Cyrus closed the discussion in Roslyn to supresss our voice, I published [an issue in developers community](https://developercommunity.visualstudio.com/content/problem/1296735/vbnet-can-actually-use-ref-structs-but-there-is-a.html), , so, please vote for it.
 
 # What is a ref struct?
 C# introduced 'ref structs' to represent a `stack-only Structures`, which can perform better (faster) than normal structures and classes, because they are allocated in a part of the memory called `the stack` and are never allowed to be moved to another part called `the heap`, which has less performance (slower). To ensure that, there are many limitation in using ref structs, to prevent them from being boxed directly or indirectly, so:
